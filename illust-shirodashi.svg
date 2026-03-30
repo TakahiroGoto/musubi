@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 534">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0EBE0"/>
+      <stop offset="100%" stop-color="#E4D9C4"/>
+    </linearGradient>
+    <radialGradient id="bowlBody" cx="42%" cy="38%" r="65%">
+      <stop offset="0%"   stop-color="#E8DFC9"/>
+      <stop offset="60%"  stop-color="#D4C4A0"/>
+      <stop offset="100%" stop-color="#B8A070"/>
+    </radialGradient>
+    <radialGradient id="dashiLiquid" cx="45%" cy="42%" r="58%">
+      <stop offset="0%"   stop-color="#EDE5D0"/>
+      <stop offset="100%" stop-color="#D8CAA8"/>
+    </radialGradient>
+    <radialGradient id="rimGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9AB7C" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#F0EBE0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="534" fill="url(#bgG)"/>
+  <!-- Subtle warmth center -->
+  <rect width="800" height="534" fill="url(#rimGlow)"/>
+
+  <!-- Large faint circle (composition frame) -->
+  <circle cx="400" cy="300" r="240" fill="none" stroke="#C9AB7C" stroke-width="1" opacity="0.18"/>
+  <circle cx="400" cy="300" r="320" fill="none" stroke="#C9AB7C" stroke-width="0.5" opacity="0.10"/>
+
+  <!-- Bowl shadow -->
+  <ellipse cx="400" cy="448" rx="188" ry="22" fill="#9B7D3A" opacity="0.12"/>
+
+  <!-- BOWL BODY (side profile, 3/4 angle) -->
+  <path d="M 178,238
+           C 166,328 218,400 262,432
+           L 538,432
+           C 582,400 634,328 622,238 Z"
+        fill="url(#bowlBody)" stroke="#5C3A1E" stroke-width="2.5"/>
+
+  <!-- Bowl foot ring (base) -->
+  <path d="M 310,430 C 310,442 355,450 400,450 C 445,450 490,442 490,430"
+        fill="#C9AB7C" stroke="#5C3A1E" stroke-width="2" opacity="0.7"/>
+  <ellipse cx="400" cy="430" rx="90" ry="12" fill="#B8A070" opacity="0.5"/>
+
+  <!-- Bowl rim (top ellipse) -->
+  <ellipse cx="400" cy="238" rx="222" ry="58" fill="#E0D5BC" stroke="#5C3A1E" stroke-width="2.5"/>
+
+  <!-- Inner rim shadow -->
+  <ellipse cx="400" cy="242" rx="204" ry="50" fill="url(#dashiLiquid)" stroke="#9B7D3A" stroke-width="1.2" opacity="0.8"/>
+
+  <!-- Dashi surface reflection -->
+  <ellipse cx="375" cy="233" rx="72" ry="18" fill="white" opacity="0.10"/>
+
+  <!-- KOMBU strip in dashi -->
+  <path d="M 226,248 C 268,228 310,258 354,236 C 398,214 442,244 488,224 C 518,210 542,232 558,222"
+        fill="none" stroke="#1A2010" stroke-width="7" stroke-linecap="round" opacity="0.88"/>
+  <!-- Kombu surface sheen -->
+  <path d="M 228,246 C 270,227 312,256 356,235 C 400,213 444,243 490,223"
+        fill="none" stroke="#4A5A2A" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <!-- Kombu edge texture -->
+  <path d="M 230,252 C 272,232 314,262 358,240 C 402,218 446,248 492,228"
+        fill="none" stroke="#0A1408" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- KATSUOBUSHI flakes -->
+  <!-- Flake 1 (large) -->
+  <path d="M 306,252 C 313,242 330,241 332,252 C 334,261 318,263 306,252 Z"
+        fill="#9B7D3A" opacity="0.72"/>
+  <!-- Flake 2 -->
+  <path d="M 448,246 C 457,236 474,237 473,248 C 472,257 456,258 448,246 Z"
+        fill="#9B7D3A" opacity="0.68"/>
+  <!-- Flake 3 -->
+  <path d="M 370,256 C 378,248 392,249 390,258 C 388,266 374,265 370,256 Z"
+        fill="#C9AB7C" opacity="0.62"/>
+  <!-- Flake 4 (small) -->
+  <path d="M 268,248 C 275,241 286,242 284,250 C 282,257 272,255 268,248 Z"
+        fill="#9B7D3A" opacity="0.55"/>
+  <!-- Flake 5 (small right) -->
+  <path d="M 508,239 C 516,232 526,233 525,241 C 524,249 513,248 508,239 Z"
+        fill="#C9AB7C" opacity="0.52"/>
+  <!-- Flake 6 (tiny) -->
+  <path d="M 426,260 C 431,255 439,256 438,263 C 437,268 429,267 426,260 Z"
+        fill="#9B7D3A" opacity="0.45"/>
+
+  <!-- Umami bubbles on surface -->
+  <circle cx="348" cy="244" r="3.5" fill="none" stroke="#9B7D3A" stroke-width="1" opacity="0.42"/>
+  <circle cx="430" cy="240" r="3"   fill="none" stroke="#9B7D3A" stroke-width="0.9" opacity="0.36"/>
+  <circle cx="478" cy="248" r="2.2" fill="none" stroke="#9B7D3A" stroke-width="0.8" opacity="0.30"/>
+  <circle cx="295" cy="246" r="2.5" fill="none" stroke="#9B7D3A" stroke-width="0.8" opacity="0.28"/>
+
+  <!-- STEAM lines (4 ribbons) -->
+  <path d="M 312,180 C 300,156 322,132 312,108 C 302,84 318,62 310,38"
+        fill="none" stroke="#C9AB7C" stroke-width="2.2" stroke-linecap="round" opacity="0.42"/>
+  <path d="M 368,162 C 356,134 382,110 372,80 C 364,58 380,38 374,14"
+        fill="none" stroke="#C9AB7C" stroke-width="2.6" stroke-linecap="round" opacity="0.48"/>
+  <path d="M 432,166 C 448,138 422,114 440,86 C 452,62 434,42 444,18"
+        fill="none" stroke="#C9AB7C" stroke-width="2.2" stroke-linecap="round" opacity="0.44"/>
+  <path d="M 492,180 C 508,154 482,130 498,102 C 510,78 494,58 502,34"
+        fill="none" stroke="#C9AB7C" stroke-width="1.8" stroke-linecap="round" opacity="0.34"/>
+
+  <!-- Bowl ceramic texture: subtle glaze lines on body -->
+  <path d="M 210,290 C 260,278 330,272 400,272 C 470,272 540,278 590,290"
+        fill="none" stroke="#5C3A1E" stroke-width="0.6" opacity="0.15"/>
+  <path d="M 200,340 C 252,328 330,322 400,322 C 470,322 548,328 600,340"
+        fill="none" stroke="#5C3A1E" stroke-width="0.5" opacity="0.12"/>
+  <path d="M 216,388 C 265,377 336,372 400,372 C 464,372 535,377 584,388"
+        fill="none" stroke="#5C3A1E" stroke-width="0.5" opacity="0.10"/>
+
+  <!-- Subtle text -->
+  <text x="400" y="514" text-anchor="middle"
+        font-family="serif" font-size="12" fill="#9B7D3A" opacity="0.38" letter-spacing="10">出 汁 の 知 恵</text>
+</svg>

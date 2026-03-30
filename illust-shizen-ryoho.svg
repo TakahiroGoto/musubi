@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 534">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#EDE5D0"/>
+      <stop offset="100%" stop-color="#E0D5BC"/>
+    </linearGradient>
+    <linearGradient id="pageL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#E4D8BE"/>
+      <stop offset="100%" stop-color="#F0EBE0"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#F0EBE0"/>
+      <stop offset="100%" stop-color="#E4D8BE"/>
+    </linearGradient>
+    <radialGradient id="bookGlow" cx="50%" cy="62%" r="45%">
+      <stop offset="0%"   stop-color="#C9AB7C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#EDE5D0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="534" fill="url(#bgG)"/>
+  <rect width="800" height="534" fill="url(#bookGlow)"/>
+
+  <!-- Large soft composition circle -->
+  <circle cx="400" cy="280" r="260" fill="none" stroke="#C9AB7C" stroke-width="0.8" opacity="0.18"/>
+
+  <!-- Decorative corner botanical (left) -->
+  <g transform="translate(30,30)" opacity="0.25">
+    <path d="M0,120 L0,50 M0,85 C-30,60 -40,40 -28,20 M0,70 C22,45 30,28 20,10"
+          fill="none" stroke="#3D5A3E" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="-26" cy="18" rx="12" ry="8" fill="#3D5A3E" transform="rotate(-20 -26 18)"/>
+    <ellipse cx="18"  cy="8"  rx="10" ry="7" fill="#3D5A3E" transform="rotate(15 18 8)"/>
+  </g>
+  <!-- Decorative corner botanical (right) -->
+  <g transform="translate(770,30)" opacity="0.25">
+    <path d="M0,120 L0,50 M0,85 C28,60 38,40 26,20 M0,70 C-22,45 -30,28 -20,10"
+          fill="none" stroke="#3D5A3E" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="24"  cy="18" rx="12" ry="8" fill="#3D5A3E" transform="rotate(20 24 18)"/>
+    <ellipse cx="-18" cy="8"  rx="10" ry="7" fill="#3D5A3E" transform="rotate(-15 -18 8)"/>
+  </g>
+
+  <!-- OPEN BOOK -->
+  <!-- Book shadow -->
+  <ellipse cx="400" cy="462" rx="215" ry="22" fill="#9B7D3A" opacity="0.13"/>
+
+  <!-- Book cover underlay (slightly larger, darker) -->
+  <path d="M 172,298 C 172,287 194,281 240,278 C 300,273 354,270 400,270
+           L 400,450 C 350,450 288,450 240,450 C 194,450 172,444 172,432 Z"
+        fill="#5C3A1E" opacity="0.15"/>
+  <path d="M 628,298 C 628,287 606,281 560,278 C 500,273 446,270 400,270
+           L 400,450 C 450,450 512,450 560,450 C 606,450 628,444 628,432 Z"
+        fill="#5C3A1E" opacity="0.15"/>
+
+  <!-- Left page -->
+  <path d="M 178,294 C 178,284 200,278 244,275 C 304,271 356,268 400,268
+           L 400,444 C 352,444 292,444 244,444 C 200,444 178,438 178,427 Z"
+        fill="url(#pageL)" stroke="#5C3A1E" stroke-width="2"/>
+
+  <!-- Right page -->
+  <path d="M 622,294 C 622,284 600,278 556,275 C 496,271 444,268 400,268
+           L 400,444 C 448,444 508,444 556,444 C 600,444 622,438 622,427 Z"
+        fill="url(#pageR)" stroke="#5C3A1E" stroke-width="2"/>
+
+  <!-- Book spine -->
+  <path d="M 400,268 L 400,444" stroke="#5C3A1E" stroke-width="3.5"/>
+  <!-- Spine highlight -->
+  <path d="M 402,268 L 402,444" stroke="#9B7D3A" stroke-width="1" opacity="0.35"/>
+
+  <!-- Left page: text lines (simulated) -->
+  <g stroke="#9B7D3A" stroke-width="0.9" opacity="0.38">
+    <line x1="206" y1="314" x2="384" y2="307"/>
+    <line x1="204" y1="329" x2="382" y2="323"/>
+    <line x1="204" y1="344" x2="382" y2="338"/>
+    <line x1="205" y1="359" x2="383" y2="354"/>
+    <line x1="206" y1="374" x2="383" y2="370"/>
+    <line x1="208" y1="389" x2="384" y2="386"/>
+    <line x1="210" y1="404" x2="384" y2="402"/>
+    <line x1="213" y1="419" x2="385" y2="418"/>
+  </g>
+  <!-- Left page: decorative small illustration box -->
+  <rect x="210" y="295" width="80" height="10" rx="1"
+        fill="#9B7D3A" opacity="0.15" stroke="#9B7D3A" stroke-width="0.5"/>
+
+  <!-- Right page: text lines -->
+  <g stroke="#9B7D3A" stroke-width="0.9" opacity="0.38">
+    <line x1="416" y1="307" x2="594" y2="314"/>
+    <line x1="416" y1="323" x2="596" y2="329"/>
+    <line x1="416" y1="338" x2="596" y2="344"/>
+    <line x1="417" y1="354" x2="595" y2="359"/>
+    <line x1="417" y1="370" x2="594" y2="374"/>
+    <line x1="416" y1="386" x2="592" y2="389"/>
+    <line x1="416" y1="402" x2="590" y2="404"/>
+    <line x1="416" y1="418" x2="588" y2="419"/>
+  </g>
+  <!-- Right page: chapter heading line -->
+  <rect x="416" y="295" width="100" height="8" rx="1"
+        fill="#7A1A1A" opacity="0.18" stroke="#7A1A1A" stroke-width="0.5"/>
+
+  <!-- Small botanical drawing on left page -->
+  <g transform="translate(310,370)" stroke="#5C3A1E" stroke-width="0.9" fill="none" opacity="0.42">
+    <path d="M0,55 L0,20" stroke-width="1.2"/>
+    <path d="M0,40 C-18,28 -22,16 -14,6"/>
+    <path d="M0,32 C16,20 20,10 12,2"/>
+    <path d="M-14,6 C-20,1 -12,-5 -8,1" fill="#3D5A3E" fill-opacity="0.4" stroke="#3D5A3E"/>
+    <path d="M12,2  C18,-3 12,-10 7,-3"  fill="#3D5A3E" fill-opacity="0.4" stroke="#3D5A3E"/>
+    <ellipse cx="-11" cy="3" rx="9" ry="6"
+             fill="#3D5A3E" fill-opacity="0.32" stroke="#3D5A3E" stroke-width="0.8" transform="rotate(-20 -11 3)"/>
+    <ellipse cx="9"   cy="0" rx="8" ry="5.5"
+             fill="#3D5A3E" fill-opacity="0.32" stroke="#3D5A3E" stroke-width="0.8" transform="rotate(15 9 0)"/>
+  </g>
+
+  <!-- MAIN PLANT growing from book center (the star of the image) -->
+  <!-- Main stem -->
+  <path d="M 400,268 C 397,230 402,190 398,148 C 395,110 400,68 400,30"
+        fill="none" stroke="#3D5A3E" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Branch left 1 (large) -->
+  <path d="M 399,210 C 376,192 350,180 332,162"
+        fill="none" stroke="#3D5A3E" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Leaf left 1 -->
+  <path d="M 332,162 C 315,146 310,128 326,122 C 342,116 356,132 352,150 C 348,165 337,167 332,162 Z"
+        fill="#3D5A3E" fill-opacity="0.72" stroke="#3D5A3E" stroke-width="1.2"/>
+  <!-- Leaf vein -->
+  <path d="M 332,162 C 335,146 342,134 346,136"
+        fill="none" stroke="#5C7A5E" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- Branch right 1 (large) -->
+  <path d="M 400,185 C 424,165 450,154 468,136"
+        fill="none" stroke="#3D5A3E" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Leaf right 1 -->
+  <path d="M 468,136 C 486,120 492,102 476,96 C 460,90 446,108 450,126 C 454,142 464,142 468,136 Z"
+        fill="#3D5A3E" fill-opacity="0.72" stroke="#3D5A3E" stroke-width="1.2"/>
+  <path d="M 468,136 C 465,120 459,108 456,110"
+        fill="none" stroke="#5C7A5E" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- Branch left 2 (medium) -->
+  <path d="M 399,152 C 370,135 348,122 328,108"
+        fill="none" stroke="#3D5A3E" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Leaf left 2 -->
+  <path d="M 328,108 C 310,93 308,76 322,70 C 336,64 348,80 344,97 C 340,112 332,114 328,108 Z"
+        fill="#3D5A3E" fill-opacity="0.62" stroke="#3D5A3E" stroke-width="1"/>
+
+  <!-- Branch right 2 (medium) -->
+  <path d="M 400,130 C 424,114 444,104 462,90"
+        fill="none" stroke="#3D5A3E" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Leaf right 2 -->
+  <path d="M 462,90 C 478,76 482,58 468,52 C 454,46 442,62 446,79 C 450,94 458,96 462,90 Z"
+        fill="#3D5A3E" fill-opacity="0.62" stroke="#3D5A3E" stroke-width="1"/>
+
+  <!-- Branch left 3 (small) -->
+  <path d="M 399,100 C 376,87 358,78 342,66"
+        fill="none" stroke="#3D5A3E" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- Leaf left 3 (small) -->
+  <path d="M 342,66 C 328,54 328,40 340,36 C 352,32 360,46 357,60 C 354,72 346,72 342,66 Z"
+        fill="#3D5A3E" fill-opacity="0.55" stroke="#3D5A3E" stroke-width="0.9"/>
+
+  <!-- Branch right 3 (small) -->
+  <path d="M 400,88 C 420,76 438,66 452,54"
+        fill="none" stroke="#3D5A3E" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- Leaf right 3 (small) -->
+  <path d="M 452,54 C 466,42 468,28 456,24 C 444,20 434,34 438,48 C 442,60 448,60 452,54 Z"
+        fill="#3D5A3E" fill-opacity="0.55" stroke="#3D5A3E" stroke-width="0.9"/>
+
+  <!-- Top flower / seed head -->
+  <circle cx="400" cy="30"  r="12"  fill="#9B7D3A" opacity="0.85"/>
+  <circle cx="400" cy="30"  r="7"   fill="#C9AB7C" opacity="0.70"/>
+  <!-- Petal ring -->
+  <circle cx="400" cy="15"  r="5"   fill="#9B7D3A" opacity="0.55"/>
+  <circle cx="413" cy="19"  r="4.5" fill="#9B7D3A" opacity="0.55"/>
+  <circle cx="418" cy="32"  r="4.5" fill="#9B7D3A" opacity="0.55"/>
+  <circle cx="413" cy="45"  r="4"   fill="#9B7D3A" opacity="0.45"/>
+  <circle cx="400" cy="50"  r="4"   fill="#9B7D3A" opacity="0.40"/>
+  <circle cx="387" cy="45"  r="4"   fill="#9B7D3A" opacity="0.45"/>
+  <circle cx="382" cy="32"  r="4.5" fill="#9B7D3A" opacity="0.55"/>
+  <circle cx="387" cy="19"  r="4.5" fill="#9B7D3A" opacity="0.55"/>
+
+  <!-- Roots of plant going into book (visible at spine) -->
+  <g opacity="0.35">
+    <path d="M 399,266 C 395,290 388,310 378,325"
+          fill="none" stroke="#5C3A1E" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 401,266 C 406,292 414,308 422,322"
+          fill="none" stroke="#5C3A1E" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 400,268 C 400,295 400,315 400,330"
+          fill="none" stroke="#5C3A1E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small leaves near base (botanical detail) -->
+  <!-- Left base -->
+  <path d="M 352,272 C 335,259 332,244 342,238 C 352,232 362,246 360,260 C 358,272 354,274 352,272 Z"
+        fill="#3D5A3E" fill-opacity="0.38" stroke="#3D5A3E" stroke-width="0.9"/>
+  <path d="M 330,276 C 315,263 314,248 324,242 C 334,236 342,250 340,264 C 338,276 334,278 330,276 Z"
+        fill="#3D5A3E" fill-opacity="0.32" stroke="#3D5A3E" stroke-width="0.8"/>
+  <!-- Right base -->
+  <path d="M 448,270 C 465,257 468,242 458,236 C 448,230 438,244 440,258 C 442,270 446,272 448,270 Z"
+        fill="#3D5A3E" fill-opacity="0.38" stroke="#3D5A3E" stroke-width="0.9"/>
+  <path d="M 470,274 C 485,261 486,246 476,240 C 466,234 456,248 458,262 C 460,274 466,276 470,274 Z"
+        fill="#3D5A3E" fill-opacity="0.32" stroke="#3D5A3E" stroke-width="0.8"/>
+
+  <!-- Decorative umeboshi (plum) circles — symbol of natural remedy -->
+  <circle cx="164" cy="200" r="7"   fill="#7A1A1A" opacity="0.28"/>
+  <circle cx="164" cy="200" r="3.5" fill="#7A1A1A" opacity="0.40"/>
+  <circle cx="636" cy="215" r="6"   fill="#7A1A1A" opacity="0.24"/>
+  <circle cx="636" cy="215" r="3"   fill="#7A1A1A" opacity="0.35"/>
+
+  <!-- Text -->
+  <text x="400" y="514" text-anchor="middle"
+        font-family="serif" font-size="12" fill="#9B7D3A" opacity="0.38" letter-spacing="10">知 恵 を 継 ぐ</text>
+</svg>

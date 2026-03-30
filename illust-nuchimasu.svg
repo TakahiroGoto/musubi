@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 534">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE5D0"/>
+      <stop offset="70%" stop-color="#E0D5BC"/>
+      <stop offset="100%" stop-color="#C9AB7C" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="seaDeep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D2820"/>
+      <stop offset="100%" stop-color="#1A0A00"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="37%" r="28%">
+      <stop offset="0%" stop-color="#9B7D3A" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#EDE5D0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="534" fill="url(#skyGrad)"/>
+  <rect width="800" height="534" fill="url(#sunGlow)"/>
+
+  <!-- Sun halo rings -->
+  <circle cx="400" cy="196" r="110" fill="#C9AB7C" opacity="0.07"/>
+  <circle cx="400" cy="196" r="85"  fill="#C9AB7C" opacity="0.10"/>
+  <circle cx="400" cy="196" r="64"  fill="#9B7D3A" opacity="0.20"/>
+  <!-- Sun body -->
+  <circle cx="400" cy="196" r="46"  fill="#9B7D3A" opacity="0.75"/>
+  <circle cx="400" cy="196" r="36"  fill="#C9AB7C" opacity="0.55"/>
+
+  <!-- Sun rays -->
+  <g stroke="#C9AB7C" stroke-width="1" opacity="0.30" stroke-linecap="round">
+    <line x1="400" y1="136" x2="400" y2="110"/>
+    <line x1="446" y1="150" x2="462" y2="128"/>
+    <line x1="468" y1="196" x2="498" y2="196"/>
+    <line x1="446" y1="242" x2="462" y2="264"/>
+    <line x1="400" y1="256" x2="400" y2="282"/>
+    <line x1="354" y1="242" x2="338" y2="264"/>
+    <line x1="332" y1="196" x2="302" y2="196"/>
+    <line x1="354" y1="150" x2="338" y2="128"/>
+  </g>
+
+  <!-- Large central salt hexagon (main motif) -->
+  <!-- flat-top, cx=400, cy=300, r=90 -->
+  <polygon points="490,300 445,378 355,378 310,300 355,222 445,222"
+           fill="#EDE5D0" fill-opacity="0.92" stroke="#5C3A1E" stroke-width="2.2"/>
+  <!-- Inner hexagon r=62 -->
+  <polygon points="462,300 431,354 369,354 338,300 369,246 431,246"
+           fill="none" stroke="#9B7D3A" stroke-width="1.2" opacity="0.55"/>
+  <!-- Inner inner r=34 -->
+  <polygon points="434,300 417,329 383,329 366,300 383,271 417,271"
+           fill="#9B7D3A" fill-opacity="0.10" stroke="#9B7D3A" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- Crystal facet glint -->
+  <line x1="390" y1="240" x2="370" y2="260" stroke="#EDE5D0" stroke-width="1.5" opacity="0.6"/>
+  <line x1="372" y1="248" x2="358" y2="258" stroke="#EDE5D0" stroke-width="1" opacity="0.4"/>
+
+  <!-- Smaller salt crystals upper-left -->
+  <!-- cx=140, cy=120, r=38 -->
+  <polygon points="178,120 159,153 121,153 102,120 121,87 159,87"
+           fill="#EDE5D0" fill-opacity="0.80" stroke="#5C3A1E" stroke-width="1.6"/>
+  <polygon points="160,120 149,139 129,139 118,120 129,101 149,101"
+           fill="none" stroke="#9B7D3A" stroke-width="0.9" opacity="0.45"/>
+
+  <!-- Upper-right: cx=660, cy=95, r=32 -->
+  <polygon points="692,95 676,123 644,123 628,95 644,67 676,67"
+           fill="#EDE5D0" fill-opacity="0.75" stroke="#5C3A1E" stroke-width="1.5"/>
+
+  <!-- Small crystals scattered -->
+  <!-- cx=245, cy=58, r=20 -->
+  <polygon points="265,58 255,75 235,75 225,58 235,41 255,41"
+           fill="#EDE5D0" fill-opacity="0.68" stroke="#9B7D3A" stroke-width="1.1"/>
+  <!-- cx=568, cy=72, r=22 -->
+  <polygon points="590,72 579,91 557,91 546,72 557,53 579,53"
+           fill="#C9AB7C" fill-opacity="0.45" stroke="#9B7D3A" stroke-width="1.1"/>
+  <!-- cx=88, cy=210, r=16 -->
+  <polygon points="104,210 96,224 80,224 72,210 80,196 96,196"
+           fill="#EDE5D0" fill-opacity="0.55" stroke="#9B7D3A" stroke-width="0.9"/>
+  <!-- cx=700, cy=175, r=18 -->
+  <polygon points="718,175 709,190 691,190 682,175 691,160 709,160"
+           fill="#EDE5D0" fill-opacity="0.60" stroke="#9B7D3A" stroke-width="0.9"/>
+
+  <!-- Sea spray / water droplets -->
+  <g fill="#C9AB7C" opacity="0.55">
+    <ellipse cx="222" cy="255" rx="4" ry="7" transform="rotate(-28 222 255)"/>
+    <ellipse cx="270" cy="230" rx="3" ry="5" transform="rotate(18 270 230)"/>
+    <ellipse cx="168" cy="300" rx="3" ry="6" transform="rotate(8 168 300)"/>
+    <ellipse cx="542" cy="248" rx="4" ry="7" transform="rotate(22 542 248)"/>
+    <ellipse cx="592" cy="220" rx="3" ry="5" transform="rotate(-12 592 220)"/>
+    <ellipse cx="640" cy="285" rx="3" ry="5" transform="rotate(-8 640 285)"/>
+    <ellipse cx="358" cy="420" rx="2.5" ry="4" transform="rotate(5 358 420)"/>
+    <ellipse cx="448" cy="415" rx="2.5" ry="4" transform="rotate(-5 448 415)"/>
+  </g>
+
+  <!-- SEA: layered wave shapes -->
+  <!-- Background sea fill -->
+  <rect x="0" y="395" width="800" height="139" fill="#1A0A00"/>
+
+  <!-- Wave layer 3 (back, darkest) -->
+  <path d="M-10,395 C 50,368 110,422 170,395 C 230,368 290,422 350,395
+           C 410,368 470,422 530,395 C 590,368 650,422 710,395
+           C 754,375 784,390 810,395 L810,534 L-10,534 Z"
+        fill="#2D2318"/>
+  <!-- Wave 3 crest line -->
+  <path d="M-10,395 C 50,368 110,422 170,395 C 230,368 290,422 350,395
+           C 410,368 470,422 530,395 C 590,368 650,422 710,395 C 754,375 784,390 810,395"
+        fill="none" stroke="#C9AB7C" stroke-width="1.5" opacity="0.30"/>
+
+  <!-- Wave layer 2 -->
+  <path d="M-10,422 C 65,394 130,448 200,422 C 270,394 335,448 405,422
+           C 475,394 540,448 610,422 C 665,402 730,432 810,422 L810,534 L-10,534 Z"
+        fill="#3D2820"/>
+  <path d="M-10,422 C 65,394 130,448 200,422 C 270,394 335,448 405,422
+           C 475,394 540,448 610,422 C 665,402 730,432 810,422"
+        fill="none" stroke="#C9AB7C" stroke-width="1" opacity="0.22"/>
+
+  <!-- Wave layer 1 (front, lightest) -->
+  <path d="M-10,450 C 85,420 165,470 250,450 C 335,420 415,470 500,450
+           C 580,420 665,470 750,450 C 778,440 798,448 810,450 L810,534 L-10,534 Z"
+        fill="#4A3020" opacity="0.90"/>
+  <path d="M-10,450 C 85,420 165,470 250,450 C 335,420 415,470 500,450
+           C 580,420 665,470 750,450 C 778,440 798,448 810,450"
+        fill="none" stroke="#C9AB7C" stroke-width="1" opacity="0.18"/>
+
+  <!-- Coral left -->
+  <g transform="translate(48,484)" stroke="#7A1A1A" stroke-linecap="round" fill="none">
+    <path d="M0,46 L0,8" stroke-width="2.8"/>
+    <path d="M0,30 L20,10" stroke-width="2"/>
+    <path d="M0,22 L-16,6" stroke-width="2"/>
+    <circle cx="0" cy="7" r="4.5" fill="#7A1A1A" stroke="none"/>
+    <circle cx="20" cy="9" r="3.5" fill="#7A1A1A" stroke="none"/>
+    <circle cx="-16" cy="5" r="3.5" fill="#7A1A1A" stroke="none"/>
+  </g>
+  <!-- Coral right -->
+  <g transform="translate(730,490)" stroke="#7A1A1A" stroke-linecap="round" fill="none" opacity="0.75">
+    <path d="M0,38 L0,6" stroke-width="2.2"/>
+    <path d="M0,24 L16,6" stroke-width="1.8"/>
+    <path d="M0,18 L-12,4" stroke-width="1.8"/>
+    <circle cx="0" cy="5" r="3.5" fill="#7A1A1A" stroke="none"/>
+    <circle cx="16" cy="5" r="2.8" fill="#7A1A1A" stroke="none"/>
+    <circle cx="-12" cy="3" r="2.8" fill="#7A1A1A" stroke="none"/>
+  </g>
+
+  <!-- Decorative text -->
+  <text x="400" y="516" text-anchor="middle"
+        font-family="serif" font-size="12" fill="#C9AB7C" opacity="0.45" letter-spacing="10">命 の 塩</text>
+</svg>

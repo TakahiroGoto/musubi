@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+:root {
+  --bg:          #F7F3EA;   /* 朝の和紙 */
+  --bg-green:    #EFF5E9;   /* 薄い草色 */
+  --bg-card:     #FDFAF5;   /* カード白 */
+  --text:        #2A1F12;   /* 温かい墨 */
+  --text-mid:    #5A4030;   /* 中間茶 */
+  --text-light:  #8A7060;   /* 薄茶 */
+  --green:       #4A6741;   /* 苔・草木 — メインアクセント */
+  --green-mid:   #6A8A60;   /* 中明度の緑 */
+  --green-pale:  #C8DFC0;   /* 薄い若草 */
+  --green-bg:    #E4EFDE;   /* 緑背景 */
+  --earth:       #8B5E3C;   /* 大地・テラコッタ */
+  --gold:        #B08A40;   /* 蜜色の金 */
+  --gold-pale:   #D4B870;   /* 薄金 */
+  --cream:       #EDE5D0;   /* クリーム */
+  --warm-red:    #9B3A2A;   /* 柔らかい朱（最小限） */
+  --dark:        #1E1A12;   /* フッター */
+  --line:        rgba(74,103,65,0.14);
+  --line-cream:  rgba(176,138,64,0.20);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+/* ─── HEADER ─── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(247,243,234,0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.logo-kanji {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  line-height: 1;
+  color: var(--green);
+}
+.logo-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.54rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  color: var(--earth);
+  text-transform: uppercase;
+}
+nav { display: flex; gap: 36px; align-items: center; }
+nav a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--text-mid);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+nav a:hover { color: var(--green); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* 背景: 薄い葉っぱのシルエット */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 80%, rgba(74,103,65,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 85% 20%, rgba(176,138,64,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(200,223,192,0.10) 0%, transparent 65%);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 640px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-bg);
+  border: 1px solid var(--green-pale);
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: var(--green);
+  margin-bottom: 36px;
+}
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.hero-title-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.55em;
+  color: var(--earth);
+  margin-bottom: 44px;
+  text-transform: uppercase;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.hero-divider-line {
+  width: 48px;
+  height: 1px;
+  background: var(--green-pale);
+}
+.hero-divider-leaf {
+  font-size: 1rem;
+  color: var(--green);
+  opacity: 0.7;
+}
+
+.hero-lead {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 2.8;
+  letter-spacing: 0.07em;
+  margin-bottom: 44px;
+}
+
+.hero-chi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.hero-chi-item {
+  padding: 14px 24px;
+  border-right: 1px solid var(--line);
+  text-align: center;
+}
+.hero-chi-item:last-child { border-right: none; }
+.hero-chi-kanji {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-chi-en {
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.54rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+/* ─── SECTION ─── */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 88px 40px;
+}
+.section-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.45em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--green-pale);
+}
+.section-title {
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  margin-bottom: 56px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ─── CHI PILLARS ─── */
+.chi-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 0;
+}
+.chi-pillar {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.chi-pillar:hover {
+  border-color: var(--green-pale);
+  box-shadow: 0 4px 24px rgba(74,103,65,0.08);
+}
+.chi-pillar-kanji {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: 0.1em;
+}
+.chi-pillar-reading {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.chi-pillar-text {
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--text-mid);
+}
+
+/* ─── PRODUCTS GRID ─── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94),
+              box-shadow 0.35s, border-color 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(74,103,65,0.12);
+  border-color: var(--green-pale);
+}
+.product-img-wrap { overflow: hidden; }
+.product-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.97) saturate(92%);
+  transition: filter 0.4s, transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.product-card:hover .product-img {
+  filter: brightness(1) saturate(100%);
+  transform: scale(1.04);
+}
+.product-body { padding: 24px 24px 28px; }
+.product-chi-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  color: var(--green);
+  background: var(--green-bg);
+  border: 1px solid var(--green-pale);
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin-bottom: 14px;
+}
+.product-category {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.product-name-jp {
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+.product-name-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+.product-reason-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.3em;
+  color: var(--gold-pale);
+  margin-bottom: 6px;
+}
+.product-reason {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+}
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.product-origin {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--text-light);
+}
+.product-arrow {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--green-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-mid);
+  font-size: 0.72rem;
+  transition: all 0.25s;
+}
+.product-card:hover .product-arrow {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* ─── GREEN CONCEPT BAND ─── */
+.concept-band {
+  background: var(--green);
+  padding: 88px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.concept-band::before {
+  content: '結';
+  position: absolute;
+  font-size: 40vw;
+  font-weight: 300;
+  color: rgba(255,255,255,0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-48%);
+  line-height: 1;
+  pointer-events: none;
+}
+.concept-band-inner {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.concept-band-kanji {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 6px;
+}
+.concept-band-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+  color: var(--green-pale);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.concept-band-text {
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 3;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.08em;
+}
+
+/* ─── JOURNEY STEPS ─── */
+.journey {
+  background: var(--bg-green);
+  padding: 88px 40px;
+}
+.journey-inner { max-width: 1000px; margin: 0 auto; }
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  position: relative;
+  margin-top: 56px;
+}
+.journey-steps::before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--green-pale);
+}
+.journey-step {
+  text-align: center;
+  padding: 0 16px 32px;
+  position: relative;
+}
+.step-num {
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid var(--green-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: var(--bg-green);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--green);
+  position: relative;
+  z-index: 1;
+}
+.step-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.step-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--text-mid);
+}
+.step-arrow {
+  position: absolute;
+  top: 20px;
+  right: -6px;
+  font-size: 0.7rem;
+  color: var(--green-pale);
+  z-index: 2;
+}
+
+/* ─── PRODUCT DETAIL ─── */
+.product-detail-hero {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 68px;
+}
+.product-detail-img-wrap { overflow: hidden; position: relative; }
+.product-detail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.96) saturate(92%);
+}
+.product-detail-intro {
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-card);
+  border-left: 3px solid var(--green-pale);
+}
+.breadcrumb {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  color: var(--text-light);
+  margin-bottom: 36px;
+}
+.breadcrumb a { color: var(--text-light); text-decoration: none; }
+.breadcrumb a:hover { color: var(--green); }
+.detail-chi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border: 1px solid var(--green-pale);
+  border-radius: 12px;
+  background: var(--green-bg);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+.detail-category {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.42em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.detail-name-jp {
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.detail-name-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 300;
+  letter-spacing: 0.38em;
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+.detail-origin-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--text-mid);
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+.detail-lead {
+  font-size: 0.88rem;
+  line-height: 2.6;
+  color: var(--text-mid);
+  margin-bottom: 40px;
+  border-left: 2px solid var(--green-pale);
+  padding-left: 16px;
+}
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-buy:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+.btn-buy-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  opacity: 0.65;
+}
+
+/* ─── WHY SECTION ─── */
+.why-section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 88px 40px;
+}
+.why-number {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--green-bg);
+  line-height: 1;
+  margin-bottom: -8px;
+}
+.why-title {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.why-title::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 1em;
+  background: var(--green-pale);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.why-text {
+  font-size: 0.86rem;
+  font-weight: 300;
+  line-height: 2.8;
+  color: var(--text-mid);
+  margin-bottom: 56px;
+}
+
+/* ─── SPECS ─── */
+.specs {
+  background: var(--bg-green);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 48px 52px;
+  margin-top: 32px;
+}
+.spec-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+}
+.spec-row:first-of-type { border-top: 1px solid var(--line); }
+.spec-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--green);
+}
+.spec-value { font-weight: 300; letter-spacing: 0.04em; color: var(--text-mid); }
+
+/* ─── ABOUT ─── */
+.about-hero {
+  min-height: 55vh;
+  background: var(--green);
+  margin-top: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero::before {
+  content: '知';
+  position: absolute;
+  font-size: 45vw;
+  font-weight: 300;
+  color: rgba(255,255,255,0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 1;
+}
+.about-hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 580px;
+}
+.about-hero h1 {
+  font-size: clamp(2rem,5vw,4rem);
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 32px;
+}
+.about-hero-text {
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 3;
+  color: rgba(255,255,255,0.68);
+  letter-spacing: 0.08em;
+}
+
+/* ─── MANIFESTO BAND ─── */
+.manifesto-band {
+  background: var(--dark);
+  padding: 96px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.manifesto-band::before {
+  content: '血';
+  position: absolute;
+  font-size: 45vw;
+  font-weight: 300;
+  color: rgba(74,103,65,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  line-height: 1;
+}
+.manifesto-band-inner {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.manifesto-band-top {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, transparent, var(--green-pale));
+  margin: 0 auto 40px;
+}
+.manifesto-band-title {
+  font-size: clamp(1.5rem,4vw,2.8rem);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(247,243,234,0.88);
+  margin-bottom: 6px;
+}
+.manifesto-band-en {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.55em;
+  color: var(--green-mid);
+  text-transform: uppercase;
+  margin-bottom: 44px;
+}
+.manifesto-band-text {
+  font-size: 0.86rem;
+  font-weight: 300;
+  line-height: 3.2;
+  color: rgba(247,243,234,0.58);
+  letter-spacing: 0.08em;
+}
+.manifesto-band-bottom {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, var(--green-pale), transparent);
+  margin: 40px auto 0;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--dark);
+  padding: 72px 40px 36px;
+  position: relative;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--green), transparent);
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  color: rgba(247,243,234,0.85);
+  margin-bottom: 3px;
+}
+.footer-tagline {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.42em;
+  color: var(--green-mid);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.footer-links { display: flex; gap: 28px; margin-bottom: 48px; flex-wrap: wrap; }
+.footer-links a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  color: rgba(200,223,192,0.55);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.footer-links a:hover { color: rgba(247,243,234,0.88); }
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.footer-copy {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(74,103,65,0.45);
+}
+.footer-aff {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: rgba(200,223,192,0.28);
+  max-width: 460px;
+  text-align: right;
+  line-height: 1.9;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .header-inner { padding: 0 24px; }
+  section { padding: 64px 24px; }
+  .chi-pillars { grid-template-columns: 1fr; gap: 12px; }
+  .products-grid { grid-template-columns: 1fr; gap: 16px; }
+  .product-detail-hero { grid-template-columns: 1fr; }
+  .product-detail-img-wrap { height: 55vw; }
+  .product-detail-intro { padding: 40px 24px; border-left: none; border-top: 3px solid var(--green-pale); }
+  .specs { padding: 28px 20px; }
+  .why-section { padding: 64px 24px; }
+  .concept-band, .manifesto-band, .journey { padding: 64px 24px; }
+  footer { padding: 56px 24px 32px; }
+  .footer-bottom { flex-direction: column; }
+  .footer-aff { text-align: left; }
+}

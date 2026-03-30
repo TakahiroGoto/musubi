@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 534">
+  <defs>
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#EDE5D0"/>
+      <stop offset="55%"  stop-color="#E4D8BC"/>
+      <stop offset="100%" stop-color="#C8D4A8"/>
+    </linearGradient>
+    <linearGradient id="mountainBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#8A9E6A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8A9E6A" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="mountainFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5A7848" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5A7848" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="riverG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#B8CAD8" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#9AB4C8" stop-opacity="0.90"/>
+    </linearGradient>
+    <linearGradient id="bottleG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#2A3C1E"/>
+      <stop offset="28%"  stop-color="#3D5A2E"/>
+      <stop offset="55%"  stop-color="#506840"/>
+      <stop offset="80%"  stop-color="#3D5A2E"/>
+      <stop offset="100%" stop-color="#2A3C1E"/>
+    </linearGradient>
+    <radialGradient id="bottleSheen" cx="32%" cy="30%" r="50%">
+      <stop offset="0%"   stop-color="#C8DFC0" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#2A3C1E"  stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#E8C870" stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#D4A840" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#EDE5D0"  stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="534" fill="url(#skyG)"/>
+
+  <!-- Sun / warm light source -->
+  <circle cx="400" cy="155" r="120" fill="url(#sunG)"/>
+  <circle cx="400" cy="155" r="52"  fill="#E8C870" opacity="0.55"/>
+  <circle cx="400" cy="155" r="36"  fill="#D4A840" opacity="0.80"/>
+  <circle cx="400" cy="155" r="24"  fill="#C89A30" opacity="0.90"/>
+
+  <!-- Far mountains (back layer) -->
+  <path d="M-10,320 C 60,240 130,200 200,240 C 260,270 310,210 380,185
+           C 430,165 470,175 520,200 C 580,230 640,255 700,235 C 740,222 775,240 810,260
+           L810,400 L-10,400 Z"
+        fill="url(#mountainBack)"/>
+
+  <!-- Near mountains (front layer) -->
+  <path d="M-10,370 C 40,300 90,260 150,290 C 200,315 240,265 300,250
+           C 360,235 400,255 450,270 C 510,290 560,248 620,258
+           C 670,266 720,295 810,310
+           L810,400 L-10,400 Z"
+        fill="url(#mountainFront)"/>
+
+  <!-- Mountain snow caps (subtle) -->
+  <path d="M 300,250 C 310,240 320,238 330,242 C 322,244 312,248 300,250 Z"
+        fill="#EDE5D0" opacity="0.55"/>
+  <path d="M 520,200 C 530,190 540,188 550,193 C 542,195 532,198 520,200 Z"
+        fill="#EDE5D0" opacity="0.45"/>
+
+  <!-- Rice field (middle ground) -->
+  <rect x="0" y="388" width="800" height="60" fill="#C8D4A0" opacity="0.60"/>
+  <!-- Rice field lines -->
+  <g stroke="#A8B880" stroke-width="0.8" opacity="0.50">
+    <line x1="0" y1="395" x2="800" y2="395"/>
+    <line x1="0" y1="403" x2="800" y2="403"/>
+    <line x1="0" y1="411" x2="800" y2="411"/>
+    <line x1="0" y1="419" x2="800" y2="419"/>
+    <line x1="0" y1="427" x2="800" y2="427"/>
+    <line x1="0" y1="435" x2="800" y2="435"/>
+    <line x1="0" y1="443" x2="800" y2="443"/>
+  </g>
+
+  <!-- River (bottom) -->
+  <path d="M-10,448 C 80,440 180,455 280,445 C 380,435 480,450 580,442 C 660,436 740,448 810,444
+           L810,534 L-10,534 Z"
+        fill="url(#riverG)"/>
+  <!-- River shimmer lines -->
+  <g stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.25">
+    <path d="M 50,460 C 90,455 130,462 170,458"/>
+    <path d="M 220,468 C 270,463 310,470 360,465"/>
+    <path d="M 420,455 C 470,450 520,457 570,453"/>
+    <path d="M 610,463 C 650,458 700,465 740,461"/>
+  </g>
+
+  <!-- SAKE BOTTLE (一升瓶) - center stage -->
+  <!-- Bottle body -->
+  <path d="M 350,175
+           C 348,175 336,180 330,198
+           C 322,220 318,260 316,310
+           C 312,360 314,410 316,440
+           L 484,440
+           C 486,410 488,360 484,310
+           C 482,260 478,220 470,198
+           C 464,180 452,175 450,175
+           C 435,168 365,168 350,175 Z"
+        fill="url(#bottleG)" stroke="#3D5A2E" stroke-width="1.5"/>
+  <!-- Bottle sheen -->
+  <path d="M 350,175
+           C 348,175 336,180 330,198
+           C 322,220 318,260 316,310
+           C 312,360 314,410 316,440
+           L 484,440
+           C 486,410 488,360 484,310
+           C 482,260 478,220 470,198
+           C 464,180 452,175 450,175
+           C 435,168 365,168 350,175 Z"
+        fill="url(#bottleSheen)"/>
+
+  <!-- Bottle shoulder lines (glass contour) -->
+  <path d="M 334,200 C 330,220 320,260 318,310"
+        fill="none" stroke="#C8DFC0" stroke-width="1" opacity="0.20"/>
+
+  <!-- Bottle label (white rectangle) -->
+  <rect x="325" y="255" width="150" height="135" rx="2"
+        fill="#F7F3EA" stroke="#C8DFC0" stroke-width="1" opacity="0.92"/>
+  <!-- Label top gold stripe -->
+  <rect x="325" y="255" width="150" height="12" rx="2"
+        fill="#D4A840" opacity="0.80"/>
+  <!-- Label text: 蓬莱 (large kanji) -->
+  <text x="400" y="326" text-anchor="middle"
+        font-family="serif" font-size="36" font-weight="400"
+        fill="#2A3C1E" opacity="0.88" letter-spacing="0.1em">蓬莱</text>
+  <!-- Label subtitle -->
+  <text x="400" y="348" text-anchor="middle"
+        font-family="serif" font-size="11"
+        fill="#5A4030" opacity="0.70" letter-spacing="0.25em">純米吟醸</text>
+  <!-- Label detail line -->
+  <line x1="340" y1="358" x2="460" y2="358"
+        stroke="#D4A840" stroke-width="0.8" opacity="0.60"/>
+  <text x="400" y="374" text-anchor="middle"
+        font-family="serif" font-size="9"
+        fill="#5A4030" opacity="0.60" letter-spacing="0.3em">家伝手造り</text>
+
+  <!-- Bottle neck -->
+  <path d="M 370,175 C 370,152 376,138 378,120
+           L 422,120 C 424,138 430,152 430,175"
+        fill="#2A3C1E" stroke="#3D5A2E" stroke-width="1.5"/>
+  <!-- Neck label (gold foil) -->
+  <rect x="372" y="142" width="56" height="24" rx="1"
+        fill="#D4A840" opacity="0.75"/>
+  <text x="400" y="158" text-anchor="middle"
+        font-family="serif" font-size="8"
+        fill="#1A2810" opacity="0.80" letter-spacing="0.2em">飛騨の酒</text>
+
+  <!-- Bottle mouth / cap -->
+  <rect x="378" y="104" width="44" height="18" rx="2"
+        fill="#4A6741" stroke="#3D5A2E" stroke-width="1"/>
+  <!-- Cap ridges -->
+  <line x1="386" y1="104" x2="386" y2="122" stroke="#3D5A2E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="394" y1="104" x2="394" y2="122" stroke="#3D5A2E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="406" y1="104" x2="406" y2="122" stroke="#3D5A2E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="414" y1="104" x2="414" y2="122" stroke="#3D5A2E" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Rice stalks (稲穂) left side -->
+  <g transform="translate(140,320)" fill="none" stroke="#8A9E5A" stroke-linecap="round">
+    <!-- Stalk 1 -->
+    <path d="M0,130 C-2,90 2,50 -4,10" stroke-width="1.8"/>
+    <g fill="#C8B860" opacity="0.80">
+      <ellipse cx="-4" cy="10"  rx="4" ry="7"  transform="rotate(-15 -4 10)"/>
+      <ellipse cx="-8" cy="20"  rx="3.5" ry="6" transform="rotate(-20 -8 20)"/>
+      <ellipse cx="0"  cy="18"  rx="3.5" ry="6" transform="rotate(-8 0 18)"/>
+      <ellipse cx="-12" cy="30" rx="3" ry="5.5" transform="rotate(-25 -12 30)"/>
+      <ellipse cx="4"  cy="28"  rx="3" ry="5.5" transform="rotate(-5 4 28)"/>
+      <ellipse cx="-6" cy="40"  rx="3" ry="5"   transform="rotate(-18 -6 40)"/>
+    </g>
+    <!-- Stalk 2 -->
+    <path d="M22,130 C20,88 24,48 18,8" stroke-width="1.8" transform="translate(10,0)"/>
+    <g fill="#C8B860" opacity="0.75" transform="translate(10,0)">
+      <ellipse cx="18"  cy="8"  rx="4"   ry="7"   transform="rotate(-12 18 8)"/>
+      <ellipse cx="14"  cy="18" rx="3.5" ry="6"   transform="rotate(-22 14 18)"/>
+      <ellipse cx="22"  cy="16" rx="3.5" ry="6"   transform="rotate(-6 22 16)"/>
+      <ellipse cx="10"  cy="28" rx="3"   ry="5.5" transform="rotate(-28 10 28)"/>
+      <ellipse cx="26"  cy="26" rx="3"   ry="5.5" transform="rotate(-3 26 26)"/>
+    </g>
+    <!-- Stalk 3 (shorter) -->
+    <path d="M-18,130 C-20,95 -16,62 -22,30" stroke-width="1.5" opacity="0.70"/>
+    <g fill="#C8B860" opacity="0.60">
+      <ellipse cx="-22" cy="30" rx="3.5" ry="6"   transform="rotate(-14 -22 30)"/>
+      <ellipse cx="-26" cy="40" rx="3"   ry="5.5" transform="rotate(-22 -26 40)"/>
+      <ellipse cx="-18" cy="38" rx="3"   ry="5.5" transform="rotate(-6 -18 38)"/>
+    </g>
+  </g>
+
+  <!-- Rice stalks right side -->
+  <g transform="translate(620,325)" fill="none" stroke="#8A9E5A" stroke-linecap="round">
+    <path d="M0,125 C2,85 -2,45 4,5" stroke-width="1.8"/>
+    <g fill="#C8B860" opacity="0.80">
+      <ellipse cx="4"  cy="5"  rx="4"   ry="7"   transform="rotate(12 4 5)"/>
+      <ellipse cx="8"  cy="15" rx="3.5" ry="6"   transform="rotate(18 8 15)"/>
+      <ellipse cx="0"  cy="13" rx="3.5" ry="6"   transform="rotate(5 0 13)"/>
+      <ellipse cx="12" cy="25" rx="3"   ry="5.5" transform="rotate(24 12 25)"/>
+      <ellipse cx="-4" cy="23" rx="3"   ry="5.5" transform="rotate(3 -4 23)"/>
+      <ellipse cx="6"  cy="35" rx="3"   ry="5"   transform="rotate(16 6 35)"/>
+    </g>
+    <path d="M-20,125 C-18,83 -22,43 -16,3" stroke-width="1.8" transform="translate(-12,0)"/>
+    <g fill="#C8B860" opacity="0.75" transform="translate(-12,0)">
+      <ellipse cx="-16" cy="3"  rx="4"   ry="7"   transform="rotate(10 -16 3)"/>
+      <ellipse cx="-12" cy="13" rx="3.5" ry="6"   transform="rotate(20 -12 13)"/>
+      <ellipse cx="-20" cy="11" rx="3.5" ry="6"   transform="rotate(4 -20 11)"/>
+      <ellipse cx="-8"  cy="23" rx="3"   ry="5.5" transform="rotate(26 -8 23)"/>
+    </g>
+  </g>
+
+  <!-- Bottle shadow on ground -->
+  <ellipse cx="400" cy="443" rx="90" ry="10" fill="#3D5A2E" opacity="0.18"/>
+
+  <!-- Decorative text -->
+  <text x="400" y="516" text-anchor="middle"
+        font-family="serif" font-size="12" fill="#6A8A60" opacity="0.45" letter-spacing="10">飛 騨 の 銘 酒</text>
+</svg>

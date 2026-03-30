@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(cmd /c \"node --version && npm --version\")",
+      "Bash(cmd /c \"where node\")",
+      "Bash(cmd /c \"node -v 2>&1 || echo NOT_FOUND\")",
+      "Bash(powershell -Command \"node -v; npm -v\")",
+      "Bash(powershell -Command \"\n  $files = @\\('product-nuchimasu.html','product-shirodashi.html','product-mirin.html','product-shizen-ryoho.html'\\)\n  foreach \\(\\\\$f in \\\\$files\\) {\n    \\\\$path = 'C:/Claude_Code_WorkSpace/kennko/' + \\\\$f\n    \\\\$content = Get-Content \\\\$path -Raw -Encoding UTF8\n    \\\\$content = \\\\$content -replace '<a href=\\\\\"index\\\\.html\\\\\">商品</a>', '<a href=\\\\\"index.html\\\\\">商品を見る</a>'\n    \\\\$content = \\\\$content -replace '<a href=\\\\\"about\\\\.html\\\\\">地・血・知とは</a>', '<a href=\\\\\"about.html\\\\\">結びについて</a>'\n    Set-Content \\\\$path \\\\$content -Encoding UTF8\n  }\n  echo 'done'\n\")",
+      "WebFetch(domain:www.amazon.co.jp)",
+      "Bash(git:*)"
+    ]
+  }
+}
